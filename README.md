@@ -62,6 +62,6 @@ This project demonstrates capabililties to work with SQL/SQLite3 and data explor
 * Interactive tasks include retrieving data about different artists, genres, and finding top artists based on a scoring system
 * Interactive menu using widgets to perform these tasks from a simple user-friendly interface
 
-# Example of Visualisation from a Selected Year
+## Example of Visualisation from a Selected Year
 ![](images/music_figure.png)
 
