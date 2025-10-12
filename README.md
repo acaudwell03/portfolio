@@ -55,3 +55,10 @@ This is my final project completed during my MSc Data Science course titled
 ## Correlation Between Sample Size and Avergage Performance
 ![](images/correlation.png)
 
+# [Project 2: Music Exploration](https://github.com/acaudwell03/Music_Exploration)
+
+This project demonstrates capabililties to work with SQL/SQLite3 and data exploration. Using a dataset from Kaggle about songs, I performed data exploration and visualisation regarding many features, including functions to interact with the database and an interactive menu which presents different elements of the database chosen by the user.
+* Functions were created to interact with an SQLite3 database from python, which includes adding and deleting entries, creating new tables, and functions to perform general SQL queries
+* Interactive tasks include retrieving data about different artists, genres, and finding top artists in a specific category (e.g. danceability)
+* Interactive menu using widgets to perform these tasks from a single user-friendly interface
+
