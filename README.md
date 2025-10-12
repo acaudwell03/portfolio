@@ -1,6 +1,6 @@
 # Alfie's Data Science Portfolio
 
-# [Project 1: Fine-grained Sentiment Analysis](www.github.com/acaudwell03/Sentiment_Analysis)
+# [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/Sentiment_Analysis)
 
 This is my final project completed during my MSc Data Science course titled 
 'From Traditional to Transformers - A Comparative Approach to Fine-Grained Sentiment Analysis'.
