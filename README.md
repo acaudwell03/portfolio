@@ -59,6 +59,9 @@ This is my final project completed during my MSc Data Science course titled
 
 This project demonstrates capabililties to work with SQL/SQLite3 and data exploration. Using a dataset from Kaggle about songs, I performed data exploration and visualisation regarding many features, including functions to interact with the database and an interactive menu which presents different elements of the database chosen by the user.
 * Functions were created to interact with an SQLite3 database from python, which includes adding and deleting entries, creating new tables, and functions to perform general SQL queries
-* Interactive tasks include retrieving data about different artists, genres, and finding top artists in a specific category (e.g. danceability)
-* Interactive menu using widgets to perform these tasks from a single user-friendly interface
+* Interactive tasks include retrieving data about different artists, genres, and finding top artists based on a scoring system
+* Interactive menu using widgets to perform these tasks from a simple user-friendly interface
+
+# Example of Visualisation from a Selected Year
+![](images/music_figure.png)
 
