@@ -2,36 +2,30 @@
 
 # [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/Sentiment_Analysis)
 
-## Project Summary
-Using Python and R, I performed a sentiment analysis with a Random Forest (RF), Convolution Neural Network (CNN), and RoBERTa model on fine-grained emotions to. After training, optimisation, and evaluation, the key findings were as follows:
-* RoBERTa performed the best with an average F1-score of 54%, compared to the CNN and RF models performing at 49% and 47%, respectively
-* RF performed better which emotions with a lower sample size
-* Performance positively correlated with sample size (0.284)
-* RoBERTa is able to use context to identify subtle nuances between emotions
+## Project Overview
+This project compares **traditional machine learning, deep learning, and transformer-based models** for **fine-grained sentiment analysis** across 27 distinct emotions using the GoEmotions dataset by Google Research.
 
-The results demonstrate the importance of model selection for sentiment analysis, reccomending RF models for smaller datasets and RoBERTa for larger datasets. It fills the gap within sentiment analysis research by comparing traditional, deep learning, and transformer models on a fine-grained dataset. This can be applied to businesses, social medias, or advertisement companies wanting to understand their users' feelings towards products and services
-  
-## Motivation
-This is my final project completed during my MSc Data Science course titled 'From Traditional to Transformers - A Comparative Approach to Fine-Grained Sentiment Analysis'. Sentiment analysis, the prediction of emotions or polarity based on data, has become more useful within businesses by applying it to product reviews, customer reccomendations, and chatbots. Understanding how customers or clients feel about a service or product can lead to actionable improvements to boost productivity and satisfaction. This can be done by analysing text, using deep learning models, to identify positive or negative sentiments and picking out key words to help identify a common issue. Many studies have demonstrated models that can accurately predict sentiments from Amazon reviews and online comments.
+The models evaluated were:
+* **Random Forest (RF)** – baseline traditional approach
+* **Convolutional Neural Network (CNN)** – custom deep learning model
+* **RoBERTa** – pre-trained transformer fine-tuned on emotion labels
+The goal was to understand how each type of model handles nuanced emotional expressions and dataset imbalances, providing actionable insights for business and research applications in NLP.
 
-However, there is little research on the number of emotions these models are able to accurately predict as they predict only positive and negetive seneiments. Understanding fine-grained emotions, such as happiness or frustration, can lead to more targetted interventions and solutions which can be tailored to the customer, potentially improving satisfaction and productivity. This project aims to fill this gap.
-
-# Methodology
-* The dataset used is the GoEmotions dataset by Google's Research Team
-* Data was imported, cleaned, preprocessed, trained, and evaluated for each model using Python and R
-* Preprocessing algorithms include: TF-IDF, Word Embeddings, Tokenisation, Stemming, Stopword Removal, Multi-Hot Encoding
-* Trained models include: Random Forest, CNN, RoBERTa
-* Models were optimised using Random Search (RF) and Bayesian Optimisation (CNN, RoBERTa)
-* F1-scores were compared per emotion
-* Post-Hoc analyses included a correlational analysis and SHAP analysis
-
-## Results
-### Emotion Distribution
-![](images/emotion_frequency.png)
+## Key Results
+| Model             | Avg. F1-Score | Notes                                                |
+| :---------------- | :------------ | :--------------------------------------------------- |
+| **Random Forest** | 0.47          | **Robust** with small or imbalanced datasets             |
+| **CNN**           | 0.49          | Learns **basic semantic structures**, limited context    |
+| **RoBERTa**       | **0.54**      | Best overall performance; captures **contextual nuance** |
 
 <br>
 
-### Emotion Frequency ![](images/Emotion_Count.pdf)
+* Performance **positively correlated** with sample size (r = 0.284)
+* RoBERTa effectively identified subtle distinctions between similar emotions (e.g., love vs joy)
+
+## Visual Results
+
+### Model Performance by Emotion
 | Emotion         | RF   | CNN  | RoBERTa | Average |
 |-----------------|------|------|----------|----------|
 | Admiration      | 0.68 | 0.69 | **0.74** | 0.70 |
@@ -66,22 +60,57 @@ However, there is little research on the number of emotions these models are abl
 
 <br>
 
-### Correlation Between Sample Size and Avergage Performance
-![](images/correlation.png)
+* **Gratitude (0.92)** was the **highest-scoring** emotion; **Grief (0.14)** the **lowest**.
+* Performance was tied closely to emotion frequency within the dataset.
 
 <br>
 
-## Discussion
-As the RoBERTa model performed the best out of all three algorithms, it is reccomended for this model or other transformer-based models to be used on large datasets for fine-grained sentiment analysis. However, it would be sensible to use RF for smaller sample sizes as this algorithm is more robust with class imbalances and smaller datasets; deep learning models require more data in order to find meaningful relationships and embeddings. Some applications for this task can include:
-* Analysing product reviews
-* Understanding sentiment during chatbot messaging
-* Targetted ads on social medias for users displaying certain emotions
+<p align="center"> <img src="images/emotion_frequency.png" alt="Emotion Frequency Distribution" width="500"> </p>
 
-Future work should be done looking into the following:
-* Larger, more balanced datasets
-* Data using different demographics/platforms
-* Text in different languages
-* The effects in its practical applications within businesses
+## Methodology
+### Data
+* **Dataset**: GoEmotions (27 emotions)
+* **Preprocessing**: Tokenisation, TF-IDF, Word Embeddings, Stopword Removal, Stemming, Multi-Hot Encoding
+* **Split**: Train (70%), Validation (15%), Test (15%)
+
+### Models
+* **Random Forest** (scikit-learn) → Optimised with Random Search
+* **CNN** (PyTorch) → 1D convolutional layers, dropout, embedding layer → Bayesian Optimization for tuning
+* **RoBERTa** (Hugging Face Transformers) → Pre-trained on the dataset, Adam, and learning rate scheduling
+
+### Evaluation
+* **F1-score** (macro)
+* **Correlation** between sample size & model performance
+* **ANOVA** with Greenhouse–Geisser correction + Holm pairwise comparisons
+* **SHAP** for interpretability
+
+## Statistcial Findings
+* **ANOVA**: F(1.26, 32.76) = 5.04, **p = 0.024** → **significant model effect**
+* **Pairwise comparisons**:
+  * RF vs DL: marginally non-significant (p ≈ 0.054)
+  * CNN vs RoBERTa: not significant (p = 0.096)
+* **Spearman's Rho**: **r = 0.284** → **weak positive** correlation between sample size & performance
+### Correlation Between Sample Size and Avergage Performance
+<p align="center"> <img src="images/correlation.png" alt="Emotion Frequency Distribution" width="500"> </p>
+
+* **Interpretation**: **RoBERTa performs best**, though differences are moderate due to sample imbalance.
+
+## Insights & Applications
+* **Business impact**: Detect nuanced emotions in **reviews, social media posts, or chatbots**.
+* **Model choice**:
+  * Use **RF for small** or imbalanced datasets
+  * Use **Transformers (RoBERTa) for large-scale**, context-rich data
+* **Future work**:
+  * Evaluate **multilingual** or cross-platform data
+  * Improve class balance via **data augmentation**
+  * Deploy as an **interactive app** for real-time emotion detection
+
+## Tech Kit
+**Languages**: Python, R
+<br>
+**Libraries**: scikit-learn, PyTorch, Transformers, Optuna, SHAP, Pandas, Matplotlib, Seaborn
+<br>
+**Tools**: Jupyter Notebook, RStudio, VS Code
 
 <br>
 
