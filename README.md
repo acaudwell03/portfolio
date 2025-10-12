@@ -15,6 +15,9 @@ This is my final project completed during my MSc Data Science course titled
 * Demonstrations of each model involve a custom sentence input which outputs highest predicted emotions
 * SHAP analysis was done on the RoBERTa model
 
+## Emotion Distribution
+![](images/emotion_frequency.png)
+
 ## Emotion Frequency ![](images/Emotion_Count.pdf)
   
 | Emotion         | RF   | CNN  | RoBERTa | Average |
@@ -48,4 +51,7 @@ This is my final project completed during my MSc Data Science course titled
 | Surprise        | 0.54 | 0.57 | **0.64** | 0.57 |
 
 > **Note:** Bold values indicate the best result for each emotion.
+
+## Correlation Between Sample Size and Avergage Performance
+![](images/correlation.png)
 
