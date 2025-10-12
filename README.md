@@ -105,7 +105,7 @@ The goal was to understand how each type of model handles nuanced emotional expr
   * Improve class balance via **data augmentation**
   * Deploy as an **interactive app** for real-time emotion detection
 
-## Tech Kit
+## Tech Stack
 **Languages**: Python, R
 <br>
 **Libraries**: scikit-learn, PyTorch, Transformers, Optuna, SHAP, Pandas, Matplotlib, Seaborn
@@ -114,13 +114,79 @@ The goal was to understand how each type of model handles nuanced emotional expr
 
 <br>
 
-# [Project 2: Music Exploration](https://github.com/acaudwell03/Music_Exploration)
+# [Project 2: Music Data Exploration & Insights](https://github.com/acaudwell03/Music_Exploration)
+## Project Overview
+This project explores a **music database** to analyse trends in song popularity, genres, artists, and audio features such as danceability, energy, and tempo.
+It demonstrates skills in **data cleaning**, **SQL database design**, **Python-based analysis**, and **visual presentation** — showing how **raw datasets** can be transformed into **actionable insights** for the music industry.
 
-This project demonstrates capabililties to work with SQL/SQLite3 and data exploration. Using a dataset from Kaggle about songs, I performed data exploration and visualisation regarding many features, including functions to interact with the database and an interactive menu which presents different elements of the database chosen by the user.
-* Functions were created to interact with an SQLite3 database from python, which includes adding and deleting entries, creating new tables, and functions to perform general SQL queries
-* Interactive tasks include retrieving data about different artists, genres, and finding top artists based on a scoring system
-* Interactive menu using widgets to perform these tasks from a simple user-friendly interface
+## Objectives
+* Create and populate a **SQLite database** from raw CSV music data
+* **Clean and preprocess** data for analysis
+* Perform **exploratory data analysis (EDA)** using SQL and Python
+* **Identify** relationships between song features and popularity
+* **Visualize patterns** in genre trends and artist performance
+
+## Methodology
+### Data Processing
+* Loaded raw **Spotify-like dataset** (songs.csv)
+* Renamed and standardized column names
+* Filtered songs using conditions such as:
+ * **popularity** > 50
+ * **speechiness** between 0.33 and 0.66
+ * **danceability** > 0.20
+* Stored the cleaned data into an SQLite database (CWDatabase.db)
+### Database Design
+#### Tables created:
+* **songs** – includes track name, artist, popularity, and key features
+* **artists** – stores artist metadata
+* **genres** – genre-level mapping
+* **song_features** – normalized audio characteristics
+  
+<br>
+
+## Example SQL Query
+
+<br>
+
+```sql
+-- Takes the selected artist and fetches genre-popularity data from the SQLite database,
+-- along with the average overall genre-popularity.
+
+ SELECT
+     g.Genre,
+     AVG(CASE
+             WHEN LOWER(REPLACE(a.ArtistName, " ", "")) LIKE ?
+             THEN s.Popularity
+             ELSE NULL
+         END) AS Artist_Popularity,
+     AVG(s.Popularity) AS Overall_Popularity
+ FROM Song s
+ JOIN Artist a ON s.ArtistID = a.ID
+ JOIN Song_genre sg ON s.ID = sg.SongID
+ JOIN Genre g ON sg.GenreID = g.ID
+ GROUP BY g.Genre
+ ORDER BY Overall_Popularity ASC;
+```
+
+<br>
 
 ## Example of Visualisation from a Selected Year
 ![](images/music_figure.png)
+
+<br> 
+
+## Future Improvements
+* Add **interactive dashboard**
+* Integrate **Spotify API** for real-time data
+* Apply **machine learning** to predict song popularity based on features
+
+<br>
+
+## Tech Stack
+**Languages**: Python, SQL
+<br>
+**Libraries**: Pandas, Numpy, SQLite3, Matplotlib
+<br>
+**Tools**: Jupyter Notebook, VS Code, DBBrowser
+
 
