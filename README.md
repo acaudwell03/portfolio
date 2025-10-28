@@ -1,6 +1,6 @@
 # Alfie's Data Science Portfolio
 
-# [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/Sentiment_Analysis)
+# [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/sentiment_analysis)
 
 ## Project Overview
 This project compares **traditional machine learning, deep learning, and transformer-based models** for **fine-grained sentiment analysis** across 27 distinct emotions using the GoEmotions dataset by Google Research.
@@ -114,7 +114,7 @@ The goal was to understand how each type of model handles nuanced emotional expr
 
 <br>
 
-# [Project 2: Music Data Exploration & Insights](https://github.com/acaudwell03/Music_Exploration)
+# [Project 2: Music Data Exploration & Insights](https://github.com/acaudwell03/music_eda)
 ## Project Overview
 This project explores a **music database** to analyse trends in song popularity, genres, artists, and audio features such as danceability, energy, and tempo.
 It demonstrates skills in **data cleaning**, **SQL database design**, **Python-based analysis**, and **visual presentation** — showing how **raw datasets** can be transformed into **actionable insights** for the music industry.
