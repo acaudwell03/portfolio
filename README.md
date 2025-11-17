@@ -198,7 +198,7 @@ It demonstrates skills in **Tableau**, using relationships to relate Excel Sheet
 * Connect Tableau to an Excel data source containing data on products, orders, and customers
 * Prepare the data fields, alter aliases, and ensure all datatypes are correct
 * Create **KPI vizzes** that show **Sales, Profit, and Quantity Sold** over a **selected year**
-* Compare KPIs to the **previous year **
+* Compare KPIs to the **previous year**
 * **Explore** other important data to show on the dashboard
 * **Add filters** to all vizzes and allow **interactivity** for more control
 * Create an **eye-catching and engaging dashboard** for **desktops and phones**
