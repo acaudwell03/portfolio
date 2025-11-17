@@ -189,4 +189,20 @@ It demonstrates skills in **data cleaning**, **SQL database design**, **Python-b
 <br>
 **Tools**: Jupyter Notebook, VS Code, DBBrowser
 
+# [Project 3: Coffee Sales Dashboard](https://public.tableau.com/views/cafesales_17633890336060/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+## Project Overview
+This project creates **interactive** and **dynamic** visualisations for cafe with coffee sales data, including KPIs, country distributions, and new customer frequency.
+It demonstrates skills in **Tableau**, using relationships to relate Excel Sheets, calculated fields, filtering, and eye-catching visuals to give the user important information about the cafe performance across time.
+
+## Objectives
+* Connect Tableau to an Excel data source containing data on products, orders, and customers
+* Prepare the data fields, alter aliases, and ensure all datatypes are correct
+* Create **KPI vizzes** that show **Sales, Profit, and Quantity Sold** over a **selected year**
+* Compare KPIs to the **previous year **
+* **Explore** other important data to show on the dashboard
+* **Add filters** to all vizzes and allow **interactivity** for more control
+* Create an **eye-catching and engaging dashboard** for **desktops and phones**
+
+  
+
 
