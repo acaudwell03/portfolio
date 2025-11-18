@@ -1,11 +1,5 @@
 # Alfie's Data Science Portfolio
 
-# Contents
-## Projects
-* **Sentmient Analysis on GoEmotions (Python|ML|NLP)**
-* **Music Data Exploration (SQL|Python|EDA|Viz)**
-* **Coffee Sales Dashboard (Tableau|Excel|Viz)**
-
 # [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/sentiment_analysis)
 
 ## Project Overview
