@@ -189,10 +189,19 @@ It demonstrates skills in **data cleaning**, **SQL database design**, **Python-b
 <br>
 **Tools**: Jupyter Notebook, VS Code, DBBrowser
 
+<br>
+
 # [Project 3: Coffee Sales Dashboard](https://public.tableau.com/views/cafesales_17633890336060/Dashboard1?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 ## Project Overview
 This project creates **interactive** and **dynamic** visualisations for cafe with coffee sales data, including KPIs, country distributions, and new customer frequency.
 It demonstrates skills in **Tableau**, using relationships to relate Excel Sheets, calculated fields, filtering, and eye-catching visuals to give the user important information about the cafe performance across time.
+
+<br>
+
+## Dashboard Preview
+<p align="center"> <img src="images/coffee_sales_dashboard.png" alt="Coffee Sales Dashboard" width="500"> </p>
+
+<br>
 
 ## Objectives
 * Connect Tableau to an Excel data source containing data on products, orders, and customers
@@ -202,6 +211,30 @@ It demonstrates skills in **Tableau**, using relationships to relate Excel Sheet
 * **Explore** other important data to show on the dashboard
 * **Add filters** to all vizzes and allow **interactivity** for more control
 * Create an **eye-catching and engaging dashboard** for **desktops and phones**
+
+## Methodology
+### Preparing Data Sources
+* Loaded Excel workbook containing product, order, and customer data
+* Built relationships across sheets using order_id, customer_id, and product_id
+* Cleaned fields, updated aliases, and corrected datatypes for consistent modelling
+### KPIs
+* Created a user-selected year parameter
+* Built calculated fields for Current Year (CY) vs Previous Year (PY) metrics (Sales, Profit, Quantity)
+* Developed monthly line charts visualising CY performance with PY comparison overlays
+* Added dynamic titles and % change indicators to highlight trends
+* Formatted visuals for clarity and consistency
+### New Customer/Loyal Customer Graphs
+* Created calculated fields to classify customers as new or returning
+* Built monthly trend charts showing growth in new customers and loyalty patterns
+* Added tooltips and filters to allow deeper exploration of customer behaviour
+### Country & Coffee Type Distribution Charts
+* Designed donut chart showing geographical distribution of customers
+* Built breakdowns by coffee type to identify top-selling categories
+* Applied interactive filters for year, country, and product type
+### Top 5 Customer Graph
+* Created ranked bar chart for top 5 customers
+* Linked filters so rankings update dynamically based on selected year or category
+
 
   
 
