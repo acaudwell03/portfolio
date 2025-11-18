@@ -1,5 +1,7 @@
 # Alfie's Data Science Portfolio
 
+This is a Data Science/Analytics portfolio, demonstrating my skills and abilities that I have developed across 4 years of academic and personal projects. This list does not include every project and I am consistently updating it with new projects.
+
 # [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/sentiment_analysis)
 
 ## Project Overview
