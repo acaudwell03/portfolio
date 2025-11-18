@@ -1,5 +1,11 @@
 # Alfie's Data Science Portfolio
 
+# Contents
+## Projects
+* **Sentmient Analysis on GoEmotions (Python|ML|NLP)**
+* **Music Data Exploration (SQL|Python|EDA|Viz)**
+* **Coffee Sales Dashboard (Tableau|Excel|Viz)**
+
 # [Project 1: Fine-grained Sentiment Analysis](https://www.github.com/acaudwell03/sentiment_analysis)
 
 ## Project Overview
@@ -234,6 +240,9 @@ It demonstrates skills in **Tableau**, using relationships to relate Excel Sheet
 ### Top 5 Customer Graph
 * Created ranked bar chart for top 5 customers
 * Linked filters so rankings update dynamically based on selected year or category
+
+## Tech Stack
+**Tools**: Tableau Public, MS Excel
 
 
   
