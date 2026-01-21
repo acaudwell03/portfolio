@@ -11,6 +11,7 @@ The models evaluated were:
 * **Random Forest (RF)** – baseline traditional approach
 * **Convolutional Neural Network (CNN)** – custom deep learning model
 * **RoBERTa** – pre-trained transformer fine-tuned on emotion labels
+
 The goal was to understand how each type of model handles nuanced emotional expressions and dataset imbalances, providing actionable insights for business and research applications in NLP.
 
 ## Key Results
